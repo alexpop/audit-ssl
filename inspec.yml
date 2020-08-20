@@ -7,6 +7,6 @@ license: Apache-2.0
 summary: An InSpec Compliance Profile
 version: 0.2.0
 depends:
-- name: ssl-certificate-profile
-  git: https://github.com/alexpop/ssl-certificate-profile
+- name: inspec-ssl-certificate
+  git: https://github.com/alexpop/inspec-ssl-certificate
   version: '~> 1.0'

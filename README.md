@@ -2,7 +2,7 @@
 
 Sample profile with test controls defined in the `controls` directory to check the HTTPS SSL certificate (validity, encryption, expiry, etc) on a list of hostnames. The list of hostnames is predefined but it can also be queried dynamically at runtime from AWS Route53, Azure, Cloudflare, etc
 
-This profile depends on the library [ssl-certificate-profile](https://github.com/alexpop/ssl-certificate-profile) for the custom `ssl_certificate` resource it contains.
+This profile depends on the library [inspec-ssl-certificate](https://github.com/alexpop/inspec-ssl-certificate) for the custom `ssl_certificate` resource it contains.
 
 ## Requirements
 
