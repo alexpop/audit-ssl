@@ -1,0 +1,12 @@
+name: audit-ssl
+title: SSL Audit Profile
+maintainer: The Authors
+copyright: The Authors
+copyright_email: email@example.com
+license: Apache-2.0
+summary: An InSpec Compliance Profile
+version: 0.2.0
+depends:
+- name: ssl-certificate-profile
+  git: https://github.com/alexpop/ssl-certificate-profile
+  version: '~> 1.0'
