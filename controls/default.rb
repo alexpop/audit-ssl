@@ -84,7 +84,7 @@ control '05-ssl-hash-algo' do
 end
 
 control '06-ssl-expire' do
-  impact 0.7
+  impact 1
   title 'Ensure the SSL certificates have over 30 days before they expire'
   sites_resources.each do |site_resource|
     describe site_resource do
