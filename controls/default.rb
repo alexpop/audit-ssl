@@ -2,6 +2,7 @@
 # For example 'first-example.com' in the array will default to HTTPS port 443
 # Or be explicit with the port like this: 'second-example.com:8443'
 
+# List of hosts/IPs or dynamically queried (e.g. Route53) during the profile execution.
 sites = [
   'chef.io',
   'id.chef.io',
