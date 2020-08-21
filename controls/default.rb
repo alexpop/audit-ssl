@@ -4,17 +4,24 @@
 
 sites = [
   'chef.io',
+  'id.chef.io',
+  'habitat.sh',
   'docs.chef.io',
   'blog.chef.io',
   'learn.chef.io',
   'manage.chef.io',
+  'bldr.habitat.sh',
+  'automate.chef.io',
   'partners.chef.io',
   'training.chef.io',
+  'packages.chef.io',
   'community.chef.io',
   'downloads.chef.io',
+  'licensing.chef.io',
   'omnitruck.chef.io',
   'discourse.chef.io',
-  'habitat.sh'
+  'forums.habitat.sh',
+  'supermarket.chef.io'
 ]
 
 # ----------------------------------------------------------
@@ -37,7 +44,7 @@ control '01-ssl-exists' do
 end
 
 control '02-ssl-is-trusted' do
-  impact 1
+  impact 0.8
   title 'Ensure that all sites return a trusted SSL certificate'
   sites_resources.each do |site_resource|
     describe site_resource do
@@ -47,7 +54,7 @@ control '02-ssl-is-trusted' do
 end
 
 control '03-no-ssl-error' do
-  impact 1
+  impact 0.9
   title 'Ensure that no SSL negotiation error has been encountered'
   sites_resources.each do |site_resource|
     describe site_resource do
@@ -57,7 +64,7 @@ control '03-no-ssl-error' do
 end
 
 control '04-ssl-sign-algo' do
-  impact 1
+  impact 0.6
   title 'Ensure that the signature algorithm is sha256WithRSAEncryption'
   sites_resources.each do |site_resource|
     describe site_resource do
@@ -67,7 +74,7 @@ control '04-ssl-sign-algo' do
 end
 
 control '05-ssl-hash-algo' do
-  impact 1
+  impact 0.6
   title 'Ensure that the hash algorithm is SHA256'
   sites_resources.each do |site_resource|
     describe site_resource do
@@ -77,7 +84,7 @@ control '05-ssl-hash-algo' do
 end
 
 control '06-ssl-expire' do
-  impact 1
+  impact 0.7
   title 'Ensure the SSL certificates have over 30 days before they expire'
   sites_resources.each do |site_resource|
     describe site_resource do
@@ -87,7 +94,7 @@ control '06-ssl-expire' do
 end
 
 control '07-ssl-issuer' do
-  impact 1
+  impact 0.4
   title 'Ensure the SSL certificate has the correct issuer'
   sites_resources.each do |site_resource|
     describe site_resource do
